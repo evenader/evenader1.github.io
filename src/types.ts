@@ -11,6 +11,8 @@ export interface SiteConfig {
 	url: string;
 }
 
+
+
 export interface PaginationLink {
 	srLabel?: string;
 	text?: string;
