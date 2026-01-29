@@ -20,6 +20,7 @@ jobs:
         uses: pnpm/action-setup@v4
         with:
           version: 9
+          run_install: false
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -28,7 +29,7 @@ jobs:
           # cache: 'pnpm' # 关键点：这里改为 pnpm
 
       - name: Install dependencies
-        run: pnpm install # 关键点：这里改为 pnpm
+        run: pnpm install --no-frozen-lockfile
 
       - name: Build
         run: pnpm run build # 关键点：这里改为 pnpm
