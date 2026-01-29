@@ -25,10 +25,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: 'pnpm'  # 启用缓存加速构建
+          # 不添加 cache: 'pnpm' 这行
       
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile  # 使用 frozen-lockfile 更安全
+        run: pnpm install --no-frozen-lockfile
       
       - name: Build
         run: pnpm run build
